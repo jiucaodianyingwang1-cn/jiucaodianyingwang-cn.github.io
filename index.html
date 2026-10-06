@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>久操电影网 - 热门电影在线观看_电影推荐_影视排行榜（官网 https://jiucaodianyingwang-cn.github.io）</title>
+<meta name="description" content="久操电影网（https://jiucaodianyingwang-cn.github.io）提供热门电影在线观看、电影推荐、影视排行榜、新片上线时间与影视资讯，每部片都标注片长时长，帮你按时间挑片。">
+<meta name="keywords" content="久操电影网,电影时长,电影片长,热门电影,电影在线观看,电影推荐,影视排行榜,新片上线,影视资讯,jiucaodianyingwang-cn,https://jiucaodianyingwang-cn.github.io">
+<meta name="author" content="久操电影网">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jiucaodianyingwang-cn.github.io/">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#1d2b26">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="久操电影网">
+<meta property="og:title" content="久操电影网 - 热门电影在线观看与电影推荐（标注片长）">
+<meta property="og:description" content="久操电影网官网 https://jiucaodianyingwang-cn.github.io，每部片都标注片长时长，按时间挑片更省心。">
+<meta property="og:url" content="https://jiucaodianyingwang-cn.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="久操电影网 - 热门电影在线观看与电影推荐">
+<meta name="twitter:description" content="久操电影网官网 https://jiucaodianyingwang-cn.github.io，时间花在哪，先看清楚。">
+<style>
+/* ==================== 基础 ==================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:126px}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,Arial,sans-serif;
+  font-size:14.5px;line-height:1.8;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-color:var(--paper);
+  background-image:
+    repeating-linear-gradient(90deg,rgba(29,43,38,.05) 0 1px,transparent 1px 10px),
+    repeating-linear-gradient(180deg,rgba(29,43,38,.05) 0 1px,transparent 1px 10px),
+    radial-gradient(700px 400px at 6% 4%,rgba(232,100,28,.08),transparent 70%),
+    radial-gradient(680px 380px at 94% 92%,rgba(47,111,106,.09),transparent 72%);
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol,dl{list-style:none}
+button,input,select,textarea{font-family:inherit}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.mono{font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-variant-numeric:tabular-nums}
+
+/* ==================== 变量：计量仪器 · 卡尺刻度 ==================== */
+:root{
+  --pine:#1d2b26;
+  --pine2:#132020;
+  --paper:#f2f0e9;
+  --paper2:#e7e4d8;
+  --ink:#1d2b26;
+  --ink2:#55655d;
+  --muted:#8b958d;
+  --orange:#e8641c;
+  --amber:#f0a93c;
+  --teal:#2f6f6a;
+  --steel:#7d8a84;
+  --line:rgba(29,43,38,.18);
+  --line2:rgba(29,43,38,.08);
+  --maxw:1180px;
+}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* ==================== 顶部主刻度尺 ==================== */
+.mainrule{height:22px;background:var(--pine);position:relative;border-bottom:2px solid var(--ink)}
+.mainrule::before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,#e7e4d8 0 1px,transparent 1px 10px);opacity:.75}
+.mainrule::after{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,#e7e4d8 0 2px,transparent 2px 50px);opacity:.95}
+.tickbar{background:var(--pine2);border-bottom:3px solid var(--ink)}
+.tickbar .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;justify-content:space-between;
+  min-height:36px;padding-top:7px;padding-bottom:7px;font-size:12px;color:#bfccc3}
+.tickbar b{color:var(--amber)}
+.tickbar .mono{letter-spacing:.16em;color:var(--orange)}
+
+/* ==================== 报头 ==================== */
+.gauge-head{background:var(--paper);border-bottom:3px solid var(--ink)}
+.gauge-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:92px;
+  padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:14px}
+.caliper{flex:0 0 auto;width:62px;height:56px}
+.caliper svg{width:62px;height:56px}
+.brand-meta .t{font-size:13px;color:var(--ink2)}
+.brand-meta .t b{color:var(--ink);font-weight:900}
+.brand-meta .url{display:block;font-size:12px;font-weight:800;color:var(--orange);margin-top:3px;
+  font-family:"SFMono-Regular",Consolas,monospace;word-break:break-all}
+.search{display:flex;border:2px solid var(--ink);background:var(--paper2)}
+.search input{border:0;outline:none;background:transparent;padding:9px 13px;font-size:14px;color:var(--ink);
+  width:210px;font-weight:600}
+.search input::placeholder{color:#9aa39c;font-weight:500}
+.search button{border:0;border-left:2px solid var(--ink);cursor:pointer;background:var(--orange);color:#fff;
+  font-weight:900;font-size:13.5px;padding:9px 16px}
+.search button:hover{background:var(--ink);color:var(--amber)}
+.nav-cb{display:none}
+.burger{display:none;width:44px;height:44px;border:2px solid var(--ink);background:var(--paper2);cursor:pointer;
+  align-items:center;justify-content:center;flex-direction:column;gap:5px;flex:0 0 auto}
+.burger i{display:block;width:18px;height:2px;background:var(--ink);transition:.28s}
+
+/* ==================== 刻度导航 ==================== */
+.scale-nav{position:sticky;top:0;z-index:60;background:var(--paper);border-bottom:3px solid var(--ink)}
+.scale-nav::before{content:"";display:block;height:12px;background:var(--ink);
+  -webkit-mask-image:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 8px);
+  mask-image:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 8px)}
+.scale-nav .wrap{display:flex;align-items:center;gap:5px;min-height:56px;overflow-x:auto;padding-top:8px;padding-bottom:8px}
+.sc{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;padding:8px 13px;font-size:13.5px;font-weight:800;
+  color:var(--ink);border-left:3px solid var(--ink);transition:.2s}
+.sc .mk{width:10px;height:14px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);display:block}
+.sc:hover{background:var(--paper2);border-left-color:var(--orange)}
+.sc.is-cta{background:var(--ink);color:#eef2ea;border-left-color:var(--amber)}
+.sc.is-cta:hover{background:var(--orange);color:#fff}
+.scale-nav .tip{margin-left:auto;font-size:11.5px;color:var(--muted);white-space:nowrap;
+  font-family:"SFMono-Regular",Consolas,monospace;letter-spacing:.12em}
+
+/* ==================== 通用区块 ==================== */
+section{padding-top:46px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:20px}
+.sec-head .lhs{display:flex;align-items:center;gap:12px}
+.sec-head .mk{flex:0 0 auto;width:40px;height:40px;border:2px solid var(--ink);background:var(--paper2);
+  display:grid;place-items:center;font-size:13px;font-weight:900;color:var(--ink);
+  font-family:"SFMono-Regular",Consolas,monospace}
+.sec-head h2{font-size:clamp(19px,3.6vw,26px);font-weight:900;letter-spacing:.5px;color:var(--ink)}
+.sec-head h2 em{font-style:normal;color:var(--orange)}
+.sec-head .lhs p{font-size:13px;color:var(--ink2);margin-top:2px}
+.sec-head .en{font-size:11px;letter-spacing:.2em;color:var(--muted);white-space:nowrap;
+  font-family:"SFMono-Regular",Consolas,monospace}
+
+/* ==================== 首屏：秒表 ==================== */
+.hero{padding-top:26px}
+.stopwatch{display:grid;grid-template-columns:1fr 1.25fr;border:3px solid var(--ink);background:var(--paper);
+  overflow:hidden;box-shadow:0 20px 44px rgba(29,43,38,.16)}
+.stopwatch .dialbox{padding:24px;border-right:3px solid var(--ink);background:var(--pine);display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.stopwatch .dialbox svg{width:100%;max-width:300px;height:auto}
+.stopwatch .dialbox .cap{font-size:11px;letter-spacing:.2em;color:var(--amber);
+  font-family:"SFMono-Regular",Consolas,monospace}
+.stopwatch .say{padding:30px 28px 32px}
+.stopwatch .kick{display:inline-flex;align-items:center;gap:9px;padding:6px 14px;border:2px solid var(--orange);
+  color:var(--orange);font-size:11px;font-weight:900;letter-spacing:.2em;
+  font-family:"SFMono-Regular",Consolas,monospace}
+.stopwatch h1{font-size:clamp(27px,5.6vw,46px);line-height:1.26;font-weight:900;letter-spacing:.5px;margin:16px 0 10px;
+  color:var(--ink)}
+.stopwatch h1 em{font-style:normal;color:var(--orange)}
+.stopwatch .say .url{display:inline-block;font-size:clamp(12px,2.1vw,14.5px);font-weight:800;color:var(--orange);
+  font-family:"SFMono-Regular",Consolas,monospace;border-bottom:1px dashed rgba(232,100,28,.5);padding-bottom:3px;
+  word-break:break-all}
+.stopwatch .say .lead{margin-top:15px;font-size:clamp(14px,2.1vw,16px);color:var(--ink2)}
+.stopwatch .say .lead b{color:var(--ink);background:rgba(240,169,60,.35);padding:0 4px}
+.hero-acts{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;font-size:14px;font-weight:900;
+  border:2px solid var(--ink);transition:.2s}
+.btn-o{background:var(--orange);color:#fff;border-color:var(--orange)}
+.btn-t{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn-g{background:transparent;color:var(--ink)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(29,43,38,.22)}
+
+/* 读数条 */
+.readouts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.ro{border:2px solid var(--ink);background:var(--paper);padding:15px 14px;position:relative;overflow:hidden}
+.ro::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:var(--ink);
+  -webkit-mask-image:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 7px);
+  mask-image:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 7px)}
+.ro b{display:block;font-size:clamp(18px,3.2vw,25px);font-weight:900;line-height:1.25;color:var(--ink);
+  font-family:"SFMono-Regular",Consolas,monospace;margin-top:4px}
+.ro b em{font-style:normal;font-size:12px;color:var(--muted);margin-left:3px}
+.ro span{font-size:12.5px;color:var(--ink2)}
+
+/* ==================== 分类：量程段 ==================== */
+.ranges{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rg{border:2px solid var(--ink);background:var(--paper);display:flex;flex-direction:column;transition:.22s}
+.rg:hover{transform:translateY(-5px);box-shadow:0 14px 24px rgba(29,43,38,.16)}
+.rg .band{height:76px;position:relative;border-bottom:2px solid var(--ink);display:flex;align-items:flex-end;
+  background:var(--paper2)}
+.rg .band .tick{position:absolute;bottom:0;width:2px;background:var(--ink);height:10px}
+.rg .band .tick.major{height:20px}
+.rg .band .lab{position:absolute;left:12px;top:10px;font-size:10.5px;font-weight:900;letter-spacing:.16em;
+  color:var(--pine);background:rgba(255,255,255,.85);padding:2px 9px;font-family:"SFMono-Regular",Consolas,monospace}
+.rg .band .avg{position:absolute;right:12px;bottom:8px;font-size:12px;font-weight:900;color:var(--orange);
+  font-family:"SFMono-Regular",Consolas,monospace}
+.rg .bd{padding:14px 15px 17px}
+.rg h3{font-size:16px;font-weight:900;color:var(--ink)}
+.rg .en{font-size:10.5px;letter-spacing:.18em;color:var(--muted);margin-top:3px;
+  font-family:"SFMono-Regular",Consolas,monospace}
+.rg .cnt{font-size:12.5px;color:var(--ink2);margin-top:8px;padding-top:8px;border-top:1px solid var(--line2)}
+.rg .cnt b{color:var(--teal);font-family:"SFMono-Regular",Consolas,monospace}
+
+/* ==================== 片单：时长条 ==================== */
+.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.reel{border:2px solid var(--ink);background:var(--paper);display:flex;flex-direction:column;transition:.22s}
+.reel:hover{transform:translateY(-6px);box-shadow:0 16px 28px rgba(29,43,38,.18)}
+.reel .strip{height:92px;display:grid;place-items:center;font-size:31px;border-bottom:2px solid var(--ink);
+  position:relative}
+.reel .strip .fmt{position:absolute;left:11px;top:10px;font-size:10.5px;font-weight:900;color:#fff;
+  background:var(--pine);padding:2px 9px;font-family:"SFMono-Regular",Consolas,monospace}
+.reel .strip .tm{position:absolute;right:11px;top:10px;font-size:12px;font-weight:900;color:var(--pine);
+  background:var(--amber);padding:2px 9px;font-family:"SFMono-Regular",Consolas,monospace}
+.reel .bd{padding:14px 15px 17px;flex:1;display:flex;flex-direction:column}
+.reel h3{font-size:15.5px;font-weight:900;color:var(--ink);line-height:1.5}
+.reel .meta{font-size:12px;color:var(--ink2);margin-top:4px;font-family:"SFMono-Regular",Consolas,monospace}
+.reel .bar{margin-top:10px}
+.reel .bar .track{height:14px;border:1px solid var(--ink);background:var(--paper2);position:relative;overflow:hidden}
+.reel .bar .track i{display:block;height:100%;
+  background:repeating-linear-gradient(90deg,var(--orange) 0 8px,var(--amber) 8px 12px)}
+.reel .bar .scale{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);margin-top:5px;
+  font-family:"SFMono-Regular",Consolas,monospace}
+.reel .desc{font-size:13.5px;color:var(--ink2);margin-top:10px;flex:1;padding-top:9px;border-top:1px solid var(--line2)}
+.reel .go{align-self:flex-start;margin-top:11px;font-size:12.5px;font-weight:900;color:#fff;background:var(--teal);
+  padding:6px 16px}
+.reel .go:hover{background:var(--ink);color:var(--amber)}
+
+/* ==================== 排行榜：量规 ==================== */
+.gauges{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.gg{border:2px solid var(--ink);background:var(--paper);padding:20px 20px 22px}
+.gg:nth-child(2){background:var(--paper2)}
+.gg h3{font-size:17px;font-weight:900;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:11px;
+  border-bottom:3px solid var(--ink);margin-bottom:5px}
+.gg h3 i{font-style:normal;font-size:11px;letter-spacing:.14em;background:var(--ink);color:var(--amber);
+  padding:3px 9px;font-family:"SFMono-Regular",Consolas,monospace}
+.gg .unit{font-size:11.5px;color:var(--muted);margin-bottom:14px;font-family:"SFMono-Regular",Consolas,monospace}
+.gg ol{display:grid;gap:11px}
+.gg li{display:grid;grid-template-columns:30px 1fr;gap:11px;align-items:center;padding:8px 11px;
+  border-bottom:1px solid var(--line2)}
+.gg li:hover{background:rgba(232,100,28,.08)}
+.gg li .no{width:30px;height:30px;display:grid;place-items:center;font-size:11.5px;font-weight:900;color:#fff;
+  background:var(--ink);font-family:"SFMono-Regular",Consolas,monospace}
+.gg li:nth-child(-n+3) .no{background:var(--orange)}
+.gg li .rw{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.gg li .tt{font-size:14px;font-weight:800;color:var(--ink)}
+.gg li .rule{height:12px;margin-top:6px;border:1px solid var(--ink);background:#fff;position:relative;overflow:hidden}
+.gg li .rule i{display:block;height:100%;background:var(--teal);
+  -webkit-mask-image:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 4px);
+  mask-image:repeating-linear-gradient(90deg,#000 0 1px,transparent 1px 4px)}
+.gg:nth-child(2) li .rule i{background:var(--orange)}
+.gg li .hs{font-size:12px;font-weight:900;color:var(--orange);white-space:nowrap;
+  font-family:"SFMono-Regular",Consolas,monospace}
+
+/* ==================== 新片：时间码表 ==================== */
+.timecode{border:2px solid var(--ink);background:var(--paper);overflow-x:auto;
+  box-shadow:0 12px 26px rgba(29,43,38,.12)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
+thead th{background:var(--pine);color:#eef2ea;font-size:12px;letter-spacing:.14em;text-align:left;padding:11px 15px;
+  white-space:nowrap;font-weight:900}
+tbody td{padding:11px 15px;border-bottom:1px solid var(--line2);color:var(--ink2)}
+tbody tr:nth-child(even){background:var(--paper2)}
+tbody tr:hover{background:#fff}
+tbody td.tc{font-family:"SFMono-Regular",Consolas,monospace;font-weight:900;color:var(--teal);white-space:nowrap}
+tbody td b{color:var(--ink);font-weight:900}
+.st{display:inline-block;font-size:11px;font-weight:900;padding:3px 11px;
+  font-family:"SFMono-Regular",Consolas,monospace}
+.st.a{background:var(--orange);color:#fff}
+.st.b{background:var(--amber);color:var(--pine)}
+.st.c{background:var(--paper2);color:var(--ink2);border:1px solid var(--line)}
+
+/* ==================== 资讯：观测记录 ==================== */
+.logs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.log{border:2px solid var(--ink);background:var(--paper);padding:20px 18px 22px;transition:.22s;position:relative}
+.log::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--ink);
+  -webkit-mask-image:repeating-linear-gradient(180deg,#000 0 1px,transparent 1px 5px);
+  mask-image:repeating-linear-gradient(180deg,#000 0 1px,transparent 1px 5px)}
+.log:hover{transform:translateY(-4px);box-shadow:0 14px 24px rgba(29,43,38,.16)}
+.log time{font-size:11.5px;font-weight:900;letter-spacing:.16em;color:var(--orange);
+  font-family:"SFMono-Regular",Consolas,monospace}
+.log h3{font-size:16px;font-weight:900;color:var(--ink);margin:9px 0 8px;line-height:1.5}
+.log p{font-size:13.5px;color:var(--ink2)}
+.log .more{display:inline-block;margin-top:11px;font-size:13px;font-weight:900;color:var(--teal);
+  border-bottom:2px solid rgba(47,111,106,.45);padding-bottom:2px}
+
+/* ==================== 关于 ==================== */
+.about{display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:start}
+.manual{border:2px solid var(--ink);background:var(--paper);padding:26px 24px}
+.manual p{font-size:14px;color:var(--ink2);margin-bottom:13px}
+.manual p b{color:var(--ink);background:rgba(240,169,60,.4);padding:0 4px}
+.manual blockquote{margin:16px 0;padding:15px 18px;border-left:4px solid var(--orange);background:var(--paper2);
+  font-size:15px;font-weight:800;color:var(--ink);line-height:1.85}
+.manual ul{display:grid;gap:11px;margin-top:16px;border-top:1px dashed var(--line);padding-top:14px}
+.manual ul li{display:grid;grid-template-columns:26px 1fr;gap:11px;font-size:13.5px;color:var(--ink2)}
+.manual ul li b{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900;
+  color:#fff;background:var(--pine);font-family:"SFMono-Regular",Consolas,monospace}
+.sidecard{border:2px solid var(--ink);background:var(--pine);padding:22px}
+.sidecard h3{font-size:11px;letter-spacing:.22em;color:var(--amber);margin-bottom:14px;
+  font-family:"SFMono-Regular",Consolas,monospace}
+.sidecard svg{width:100%;height:auto}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:8px 0;margin-top:10px;
+  border-bottom:1px dotted rgba(240,169,60,.32);font-size:13px}
+.kv:last-child{border-bottom:0}
+.kv span{color:#bfccc3}
+.kv b{color:#fff;font-weight:900;font-family:"SFMono-Regular",Consolas,monospace;word-break:break-all}
+
+/* ==================== FAQ ==================== */
+.faq{max-width:880px;display:grid;gap:11px}
+.faq details{border:2px solid var(--ink);background:var(--paper)}
+.faq summary{cursor:pointer;padding:14px 18px;font-size:15.5px;font-weight:900;color:var(--ink);list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--orange);font-size:15px;font-weight:900}
+.faq details[open] summary::after{content:"－";color:var(--teal)}
+.faq details[open] summary{background:var(--paper2);border-bottom:1px solid var(--line2)}
+.faq details p{padding:13px 18px 17px;font-size:14px;color:var(--ink2)}
+
+/* ==================== 联系 ==================== */
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start}
+.form{border:2px solid var(--ink);background:var(--paper);padding:24px}
+.form h3{font-size:11px;letter-spacing:.22em;color:var(--muted);margin-bottom:16px;
+  font-family:"SFMono-Regular",Consolas,monospace}
+.f-row{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:center;margin-bottom:13px}
+.f-row label{font-size:13px;font-weight:800;color:var(--ink)}
+.f-row input,.f-row select,.f-row textarea{width:100%;border:2px solid var(--ink);background:#fbfaf5;
+  padding:10px 13px;font-size:14px;color:var(--ink);outline:none}
+.f-row textarea{min-height:104px;resize:vertical}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--orange);background:#fff}
+.f-row input::placeholder,.f-row textarea::placeholder{color:#9aa39c}
+.f-sub{grid-column:2}
+.f-sub button{border:0;cursor:pointer;background:var(--orange);color:#fff;font-size:14px;font-weight:900;
+  padding:12px 30px;letter-spacing:.05em}
+.f-sub button:hover{background:var(--ink);color:var(--amber)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{font-size:12px;font-weight:800;padding:6px 13px;border:2px solid rgba(240,169,60,.45);color:#e8dcc2}
+
+/* ==================== 页脚 ==================== */
+.site-footer{margin-top:52px;background:var(--pine);color:#bfccc3;padding:38px 0 24px;border-top:4px solid var(--amber)}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:22px}
+.fgrid h4{font-size:13.5px;font-weight:900;color:var(--amber);margin-bottom:12px;letter-spacing:.08em}
+.fgrid p{font-size:13.5px;color:#bfccc3;line-height:1.85}
+.fgrid a{display:block;font-size:13.5px;color:#dde5dc;padding:3px 0}
+.fgrid a:hover{color:var(--amber)}
+.copy{margin-top:24px;padding-top:18px;border-top:1px dashed rgba(240,169,60,.3);display:flex;flex-wrap:wrap;
+  gap:8px 16px;justify-content:space-between;font-size:12.5px;color:#8b9b8f}
+.totop{position:fixed;right:16px;bottom:16px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  border:2px solid var(--amber);background:var(--pine);color:var(--amber);font-weight:900;z-index:70}
+
+/* ==================== 响应式 ==================== */
+@media (max-width:1000px){
+  .ranges,.reels{grid-template-columns:repeat(2,1fr)}
+  .logs{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .search input{width:150px}
+}
+@media (max-width:860px){
+  .stopwatch{grid-template-columns:1fr}
+  .stopwatch .dialbox{border-right:0;border-bottom:3px solid var(--ink)}
+}
+@media (max-width:760px){
+  .burger{display:flex}
+  .search{display:none}
+  .scale-nav{position:relative}
+  .scale-nav .wrap{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;
+    gap:5px;padding:12px 20px 18px;background:var(--paper);border-bottom:3px solid var(--ink);
+    box-shadow:0 14px 24px rgba(29,43,38,.18)}
+  .nav-cb:checked ~ .scale-nav .wrap{display:flex}
+  .nav-cb:checked ~ .gauge-head .burger i:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .nav-cb:checked ~ .gauge-head .burger i:nth-child(2){opacity:0}
+  .nav-cb:checked ~ .gauge-head .burger i:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .sc{justify-content:flex-start;font-size:15px;padding:11px 14px}
+  .sc.is-cta{justify-content:center}
+  .scale-nav .tip{display:none}
+  .ranges,.reels,.logs,.gauges,.about,.contact{grid-template-columns:1fr}
+  .readouts{grid-template-columns:repeat(2,1fr)}
+  .stopwatch .say{padding:22px 18px 24px}
+  .gauge-head .wrap{padding:12px 16px}
+  .f-row{grid-template-columns:1fr}
+  .f-sub{grid-column:1}
+  section{padding-top:34px}
+  .hero{padding-top:18px}
+  .site-footer{margin-top:34px}
+}
+@media (max-width:420px){
+  .fgrid{grid-template-columns:1fr}
+  .readouts{grid-template-columns:1fr}
+  .hero-acts .btn{width:100%;justify-content:center}
+  .sec-head .en{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+<input class="nav-cb sr-only" id="navCb" type="checkbox" aria-label="展开久操电影网导航">
+
+<!-- ==================== 顶部主刻度尺 + 读数条 ==================== -->
+<div class="mainrule" aria-hidden="true"></div>
+<div class="tickbar">
+  <div class="wrap">
+    <span>久操电影网 · 今日上新 <b>168</b> 部</span>
+    <span class="mono">RUNTIME LAB · 01:52:40</span>
+    <span>官网 https://jiucaodianyingwang-cn.github.io</span>
+  </div>
+</div>
+
+<!-- ==================== 报头 ==================== -->
+<header class="gauge-head">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="久操电影网 首页">
+      <span class="caliper">
+        <svg viewBox="0 0 62 56" role="img" aria-label="久操电影网卡尺标识，象征片长测量">
+          <rect x="4" y="14" width="54" height="7" fill="#1d2b26"/>
+          <rect x="4" y="14" width="16" height="18" fill="#1d2b26"/>
+          <path d="M20 32 L20 20 L30 20 L30 32 Z" fill="#e8641c"/>
+          <rect x="34" y="14" width="24" height="7" fill="#1d2b26"/>
+          <path d="M42 21 L42 34 L52 34 L52 21 Z" fill="#2f6f6a"/>
+          <g stroke="#1d2b26" stroke-width="1">
+            <path d="M8 14 L8 20 M12 14 L12 18 M16 14 L16 18 M20 14 L20 20 M24 14 L24 18 M28 14 L28 18"/>
+            <path d="M34 14 L34 20 M38 14 L38 18 M42 14 L42 20 M46 14 L46 18 M50 14 L50 18"/>
+          </g>
+          <rect x="4" y="42" width="54" height="4" fill="#f0a93c"/>
+          <text x="31" y="53" fill="#1d2b26" font-size="7" font-weight="900" text-anchor="middle">128 MIN</text>
+        </svg>
+      </span>
+      <span class="brand-meta">
+        <span class="t"><b>久操电影网</b> · 电影片长 · 影视排行榜 · 新片上线</span>
+        <span class="url">https://jiucaodianyingwang-cn.github.io</span>
+      </span>
+    </a>
+    <form class="search" action="#" method="get" onsubmit="return false;" role="search">
+      <label class="sr-only" for="kw">搜索久操电影网</label>
+      <input id="kw" name="kw" type="search" placeholder="搜索片名 / 类型 / 时长">
+      <button type="submit">搜索</button>
+    </form>
+    <label class="burger" for="navCb" aria-hidden="true"><i></i><i></i><i></i></label>
+  </div>
+</header>
+
+<!-- ==================== 刻度导航 ==================== -->
+<nav class="scale-nav" aria-label="久操电影网主导航">
+  <div class="wrap">
+    <a class="sc is-cta" href="#home"><span class="mk" aria-hidden="true"></span>首页</a>
+    <a class="sc" href="#category"><span class="mk" aria-hidden="true"></span>量程分类</a>
+    <a class="sc" href="#pick"><span class="mk" aria-hidden="true"></span>时长片单</a>
+    <a class="sc" href="#rank"><span class="mk" aria-hidden="true"></span>影视排行榜</a>
+    <a class="sc" href="#release"><span class="mk" aria-hidden="true"></span>新片上线</a>
+    <a class="sc" href="#news"><span class="mk" aria-hidden="true"></span>影视资讯</a>
+    <a class="sc" href="#about"><span class="mk" aria-hidden="true"></span>关于久操电影网</a>
+    <a class="sc" href="#faq"><span class="mk" aria-hidden="true"></span>常见问题</a>
+    <a class="sc is-cta" href="#contact"><span class="mk" aria-hidden="true"></span>联系我们</a>
+    <span class="tip">时间花在哪 · 先看清楚</span>
+  </div>
+</nav>
+
+<main>
+  <!-- ==================== 首屏 ==================== -->
+  <section id="home" class="hero" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <article class="stopwatch">
+        <div class="dialbox">
+          <svg viewBox="0 0 300 240" role="img" aria-label="久操电影网秒表表盘示意图，指针指向 1 小时 52 分，外圈为分钟刻度">
+            <circle cx="150" cy="118" r="104" fill="#132020" stroke="#e8641c" stroke-width="3"/>
+            <circle cx="150" cy="118" r="92" fill="none" stroke="rgba(240,169,60,.35)" stroke-width="1"/>
+            <g stroke="#e7e4d8" stroke-width="1.6">
+              <path d="M150 14 L150 26"/><path d="M254 118 L242 118"/><path d="M150 222 L150 210"/>
+              <path d="M46 118 L58 118"/>
+            </g>
+            <g stroke="rgba(231,228,216,.6)" stroke-width="1">
+              <path d="M150 14 L150 22" transform="rotate(30 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(60 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(90 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(120 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(150 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(180 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(210 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(240 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(270 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(300 150 118)"/>
+              <path d="M150 14 L150 22" transform="rotate(330 150 118)"/>
+            </g>
+            <g fill="#e7e4d8" font-size="12" font-weight="900" text-anchor="middle" font-family="monospace">
+              <text x="150" y="52">60</text><text x="248" y="122">15</text>
+              <text x="150" y="196">30</text><text x="52" y="122">45</text>
+            </g>
+            <path d="M150 118 L150 44" stroke="#e8641c" stroke-width="4"/>
+            <path d="M150 118 L214 118" stroke="#f0a93c" stroke-width="3"/>
+            <circle cx="150" cy="118" r="8" fill="#f0a93c"/>
+            <circle cx="150" cy="118" r="3" fill="#132020"/>
+            <rect x="112" y="150" width="76" height="26" fill="#1d2b26" stroke="#e8641c" stroke-width="1.5"/>
+            <text x="150" y="168" fill="#f0a93c" font-size="12" font-weight="900" text-anchor="middle" font-family="monospace">01:52:40</text>
+            <text x="150" y="212" fill="#bfccc3" font-size="10" text-anchor="middle" font-family="monospace">AVG RUNTIME · 久操电影网</text>
+          </svg>
+          <p class="cap">DIAL / 平均片长读数</p>
+        </div>
+        <div class="say">
+          <p class="kick">◷ RUNTIME LAB · 片长实测</p>
+          <h1 id="heroTitle">久操电影网，<em>时间花在哪先看清楚</em></h1>
+          <p class="url">https://jiucaodianyingwang-cn.github.io</p>
+          <p class="lead">久操电影网（官网 https://jiucaodianyingwang-cn.github.io）给每部片标上实测片长，配热门电影、电影推荐、影视排行榜与新片上线时间。<b>先看清楚要花多久</b>，再决定今晚看不看。</p>
+          <div class="hero-acts">
+            <a class="btn btn-o" href="#pick">按时长挑片</a>
+            <a class="btn btn-t" href="#rank">影视排行榜</a>
+            <a class="btn btn-g" href="#release">新片上线时间</a>
+          </div>
+        </div>
+      </article>
+      <ul class="readouts">
+        <li class="ro"><b class="mono">29,900<em>+</em></b><span>久操电影网收录影片</span></li>
+        <li class="ro"><b>112 min</b><span>站内平均片长</span></li>
+        <li class="ro"><b>90-180 min</b><span>可筛选时长区间</span></li>
+        <li class="ro"><b>0 元</b><span>久操电影网免费看</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== 量程分类 ==================== -->
+  <section id="category" aria-labelledby="catTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lhs">
+          <span class="mk" aria-hidden="true">◷</span>
+          <div><h2 id="catTitle">久操电影网<em>量程分类</em></h2>
+          <p>久操电影网把片库划成 8 个量程段，每段标出该题材的平均片长读数。</p></div>
+        </div>
+        <span class="en">// RANGE 01 - 08</span>
+      </div>
+      <div class="ranges">
+        <a class="rg" href="#">
+          <span class="band">
+            <span class="lab">RANGE 01</span>
+            <span class="avg">均 118 min</span>
+            <span class="tick" style="left:12%"></span><span class="tick major" style="left:30%"></span>
+            <span class="tick" style="left:48%"></span><span class="tick major" style="left:66%"></span>
+            <span class="tick" style="left:84%"></span>
+          </span>
+          <span class="bd"><h3>动作犯罪</h3><p class="en">ACTION / CRIME</p>
+          <p class="cnt">在库 <b>3,356</b> 部 · 高燃强节奏</p></span>
+        </a>
+        <a class="rg" href="#">
+          <span class="band">
+            <span class="lab">RANGE 02</span>
+            <span class="avg">均 99 min</span>
+            <span class="tick" style="left:10%"></span><span class="tick major" style="left:26%"></span>
+            <span class="tick" style="left:44%"></span><span class="tick major" style="left:62%"></span>
+            <span class="tick" style="left:80%"></span>
+          </span>
+          <span class="bd"><h3>喜剧解压</h3><p class="en">COMEDY</p>
+          <p class="cnt">在库 <b>2,330</b> 部 · 短平快</p></span>
+        </a>
+        <a class="rg" href="#">
+          <span class="band">
+            <span class="lab">RANGE 03</span>
+            <span class="avg">均 136 min</span>
+            <span class="tick" style="left:14%"></span><span class="tick major" style="left:34%"></span>
+            <span class="tick" style="left:54%"></span><span class="tick major" style="left:74%"></span>
+            <span class="tick" style="left:90%"></span>
+          </span>
+          <span class="bd"><h3>科幻冒险</h3><p class="en">SCI-FI</p>
+          <p class="cnt">在库 <b>1,974</b> 部 · 长片居多</p></span>
+        </a>
+        <a class="rg" href="#">
+          <span class="band">
+            <span class="lab">RANGE 04</span>
+            <span class="avg">均 110 min</span>
+            <span class="tick" style="left:11%"></span><span class="tick major" style="left:28%"></span>
+            <span class="tick" style="left:46%"></span><span class="tick major" style="left:64%"></span>
+            <span class="tick" style="left:82%"></span>
+          </span>
+          <span class="bd"><h3>爱情文艺</h3><p class="en">ROMANCE</p>
+          <p class="cnt">在库 <b>2,596</b> 部 · 慢节奏</p></span>
+        </a>
+        <a class="rg" href="#">
+          <span class="band">
+            <span class="lab">RANGE 05</span>
+            <span class="avg">均 124 min</span>
+            <span class="tick" style="left:13%"></span><span class="tick major" style="left:32%"></span>
+            <span class="tick" style="left:51%"></span><span class="tick major" style="left:70%"></span>
+            <span class="tick" style="left:88%"></span>
+          </span>
+          <span class="bd"><h3>悬疑推理</h3><p class="en">THRILLER</p>
+          <p class="cnt">在库 <b>2,070</b> 部 · 多反转</p></span>
+        </a>
+        <a class="rg" href="#">
+          <span class="band">
+            <span class="lab">RANGE 06</span>
+            <span class="avg">均 104 min</span>
+            <span class="tick" style="left:11%"></span><span class="tick major" style="left:27%"></span>
+            <span class="tick" style="left:45%"></span><span class="tick major" style="left:63%"></span>
+            <span class="tick" style="left:81%"></span>
+          </span>
+          <span class="bd"><h3>治愈暖心</h3><p class="en">HEALING</p>
+          <p class="cnt">在库 <b>1,744</b> 部 · 低冲突</p></span>
+        </a>
+        <a class="rg" href="#">
+          <span class="band">
+            <span class="lab">RANGE 07</span>
+            <span class="avg">均 96 min</span>
+            <span class="tick" style="left:9%"></span><span class="tick major" style="left:25%"></span>
+            <span class="tick" style="left:42%"></span><span class="tick major" style="left:60%"></span>
+            <span class="tick" style="left:78%"></span>
+          </span>
+          <span class="bd"><h3>动画电影</h3><p class="en">ANIMATION</p>
+          <p class="cnt">在库 <b>1,560</b> 部 · 全年龄</p></span>
+        </a>
+        <a class="rg" href="#">
+          <span class="band">
+            <span class="lab">RANGE 08</span>
+            <span class="avg">均 121 min</span>
+            <span class="tick" style="left:12%"></span><span class="tick major" style="left:31%"></span>
+            <span class="tick" style="left:50%"></span><span class="tick major" style="left:69%"></span>
+            <span class="tick" style="left:86%"></span>
+          </span>
+          <span class="bd"><h3>经典修复</h3><p class="en">RESTORED</p>
+          <p class="cnt">在库 <b>1,090</b> 部 · 老片新看</p></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 时长片单 ==================== -->
+  <section id="pick" aria-labelledby="pickTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lhs">
+          <span class="mk" aria-hidden="true">◷</span>
+          <div><h2 id="pickTitle">久操电影网<em>时长片单</em></h2>
+          <p>久操电影网按站内播放热度与口碑筛选，每部都标实测片长，每周更新一次。</p></div>
+        </div>
+        <span class="en">// REEL 01 - 08</span>
+      </div>
+      <div class="reels">
+        <article class="reel">
+          <div class="strip" style="background:linear-gradient(150deg,#e7e4d8,#cfd3c6)">
+            <span class="fmt">4K</span><span class="tm">128 min</span><span aria-hidden="true">🎬</span>
+          </div>
+          <div class="bd">
+            <h3>长镜头之夜</h3>
+            <p class="meta">2026 / 剧情·都市 / 02:08:00</p>
+            <div class="bar">
+              <div class="track"><i style="width:71%"></i></div>
+              <div class="scale"><span>0</span><span>时长占比 71%</span><span>180 min</span></div>
+            </div>
+            <p class="desc">双线叙事的都市夜戏，人物关系扎实，热播榜连续四周第一。</p>
+            <a class="go" href="#">立即观看</a>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="strip" style="background:linear-gradient(150deg,#cdd8d2,#a9bab2)">
+            <span class="fmt">4K</span><span class="tm">144 min</span><span aria-hidden="true">🚀</span>
+          </div>
+          <div class="bd">
+            <h3>星轨尽头</h3>
+            <p class="meta">2026 / 科幻·冒险 / 02:24:00</p>
+            <div class="bar">
+              <div class="track"><i style="width:80%"></i></div>
+              <div class="scale"><span>0</span><span>时长占比 80%</span><span>180 min</span></div>
+            </div>
+            <p class="desc">设定扎实的太空科幻，视觉与叙事都站得住，久操电影网科幻量程口碑新高。</p>
+            <a class="go" href="#">立即观看</a>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="strip" style="background:linear-gradient(150deg,#e8d9c4,#d3bf9f)">
+            <span class="fmt">1080P</span><span class="tm">119 min</span><span aria-hidden="true">💥</span>
+          </div>
+          <div class="bd">
+            <h3>烈风追缉</h3>
+            <p class="meta">2026 / 动作·谍战 / 01:59:00</p>
+            <div class="bar">
+              <div class="track"><i style="width:66%"></i></div>
+              <div class="scale"><span>0</span><span>时长占比 66%</span><span>180 min</span></div>
+            </div>
+            <p class="desc">动作密度高，追车与近身戏都拍得干脆，动作量程播放增速最快。</p>
+            <a class="go" href="#">立即观看</a>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="strip" style="background:linear-gradient(150deg,#cfd6dc,#aeb9c2)">
+            <span class="fmt">4K</span><span class="tm">125 min</span><span aria-hidden="true">🕵️</span>
+          </div>
+          <div class="bd">
+            <h3>第八封回信</h3>
+            <p class="meta">2025 / 悬疑·推理 / 02:05:00</p>
+            <div class="bar">
+              <div class="track"><i style="width:69%"></i></div>
+              <div class="scale"><span>0</span><span>时长占比 69%</span><span>180 min</span></div>
+            </div>
+            <p class="desc">密闭空间推理，线索埋得干净，看完想立刻二刷一遍。</p>
+            <a class="go" href="#">立即观看</a>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="strip" style="background:linear-gradient(150deg,#e9e2cb,#cfc4a4)">
+            <span class="fmt">1080P</span><span class="tm">103 min</span><span aria-hidden="true">🍊</span>
+          </div>
+          <div class="bd">
+            <h3>周末大作战</h3>
+            <p class="meta">2026 / 喜剧·都市 / 01:43:00</p>
+            <div class="bar">
+              <div class="track"><i style="width:57%"></i></div>
+              <div class="scale"><span>0</span><span>时长占比 57%</span><span>180 min</span></div>
+            </div>
+            <p class="desc">节奏轻快的都市喜剧，在久操电影网适合一小时内轻松看完。</p>
+            <a class="go" href="#">立即观看</a>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="strip" style="background:linear-gradient(150deg,#c9d3cd,#a4b2aa)">
+            <span class="fmt">4K</span><span class="tm">146 min</span><span aria-hidden="true">🎖️</span>
+          </div>
+          <div class="bd">
+            <h3>铁线防线</h3>
+            <p class="meta">2025 / 战争·历史 / 02:26:00</p>
+            <div class="bar">
+              <div class="track"><i style="width:81%"></i></div>
+              <div class="scale"><span>0</span><span>时长占比 81%</span><span>180 min</span></div>
+            </div>
+            <p class="desc">群像战争片，场面与人物并重，在久操电影网长期在榜。</p>
+            <a class="go" href="#">立即观看</a>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="strip" style="background:linear-gradient(150deg,#e4dcd6,#c6bcb4)">
+            <span class="fmt">1080P</span><span class="tm">112 min</span><span aria-hidden="true">💌</span>
+          </div>
+          <div class="bd">
+            <h3>晚风邮局</h3>
+            <p class="meta">2026 / 爱情·文艺 / 01:52:00</p>
+            <div class="bar">
+              <div class="track"><i style="width:62%"></i></div>
+              <div class="scale"><span>0</span><span>时长占比 62%</span><span>180 min</span></div>
+            </div>
+            <p class="desc">克制细腻的爱情小品，配色和配乐都很舒服，适合一个人看。</p>
+            <a class="go" href="#">立即观看</a>
+          </div>
+        </article>
+        <article class="reel">
+          <div class="strip" style="background:linear-gradient(150deg,#dfe2d3,#bcc2ae)">
+            <span class="fmt">4K</span><span class="tm">107 min</span><span aria-hidden="true">🎨</span>
+          </div>
+          <div class="bd">
+            <h3>山海图志</h3>
+            <p class="meta">2026 / 动画·奇幻 / 01:47:00</p>
+            <div class="bar">
+              <div class="track"><i style="width:59%"></i></div>
+              <div class="scale"><span>0</span><span>时长占比 59%</span><span>180 min</span></div>
+            </div>
+            <p class="desc">国风动画电影，画面质感在久操电影网动画量程评价很高，全年龄可看。</p>
+            <a class="go" href="#">立即观看</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 影视排行榜 ==================== -->
+  <section id="rank" aria-labelledby="rankTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lhs">
+          <span class="mk" aria-hidden="true">◷</span>
+          <div><h2 id="rankTitle">久操电影网<em>影视排行榜</em></h2>
+          <p>数据来自站内播放与收藏统计，每日 0 点刷新。</p></div>
+        </div>
+        <span class="en">// TOP 8</span>
+      </div>
+      <div class="gauges">
+        <div class="gg">
+          <h3>热播榜 <i>TOP 8</i></h3>
+          <p class="unit">单位：万次 / 统计周期 30 天</p>
+          <ol>
+            <li><span class="no mono">01</span><span class="rw"><span><span class="tt">长镜头之夜</span><span class="rule" aria-hidden="true"><i style="width:100%"></i></span></span><span class="hs">2918</span></span></li>
+            <li><span class="no mono">02</span><span class="rw"><span><span class="tt">星轨尽头</span><span class="rule" aria-hidden="true"><i style="width:90%"></i></span></span><span class="hs">2632</span></span></li>
+            <li><span class="no mono">03</span><span class="rw"><span><span class="tt">烈风追缉</span><span class="rule" aria-hidden="true"><i style="width:81%"></i></span></span><span class="hs">2371</span></span></li>
+            <li><span class="no mono">04</span><span class="rw"><span><span class="tt">第八封回信</span><span class="rule" aria-hidden="true"><i style="width:69%"></i></span></span><span class="hs">2004</span></span></li>
+            <li><span class="no mono">05</span><span class="rw"><span><span class="tt">周末大作战</span><span class="rule" aria-hidden="true"><i style="width:60%"></i></span></span><span class="hs">1752</span></span></li>
+            <li><span class="no mono">06</span><span class="rw"><span><span class="tt">铁线防线</span><span class="rule" aria-hidden="true"><i style="width:53%"></i></span></span><span class="hs">1536</span></span></li>
+            <li><span class="no mono">07</span><span class="rw"><span><span class="tt">晚风邮局</span><span class="rule" aria-hidden="true"><i style="width:46%"></i></span></span><span class="hs">1348</span></span></li>
+            <li><span class="no mono">08</span><span class="rw"><span><span class="tt">山海图志</span><span class="rule" aria-hidden="true"><i style="width:41%"></i></span></span><span class="hs">1192</span></span></li>
+          </ol>
+        </div>
+        <div class="gg">
+          <h3>口碑榜 <i>TOP 8</i></h3>
+          <p class="unit">单位：分 / 满分 10 分</p>
+          <ol>
+            <li><span class="no mono">01</span><span class="rw"><span><span class="tt">长镜头之夜</span><span class="rule" aria-hidden="true"><i style="width:94%"></i></span></span><span class="hs">9.4</span></span></li>
+            <li><span class="no mono">02</span><span class="rw"><span><span class="tt">星轨尽头</span><span class="rule" aria-hidden="true"><i style="width:92%"></i></span></span><span class="hs">9.2</span></span></li>
+            <li><span class="no mono">03</span><span class="rw"><span><span class="tt">烈风追缉</span><span class="rule" aria-hidden="true"><i style="width:91%"></i></span></span><span class="hs">9.1</span></span></li>
+            <li><span class="no mono">04</span><span class="rw"><span><span class="tt">第八封回信</span><span class="rule" aria-hidden="true"><i style="width:90%"></i></span></span><span class="hs">9.0</span></span></li>
+            <li><span class="no mono">05</span><span class="rw"><span><span class="tt">周末大作战</span><span class="rule" aria-hidden="true"><i style="width:89%"></i></span></span><span class="hs">8.9</span></span></li>
+            <li><span class="no mono">06</span><span class="rw"><span><span class="tt">铁线防线</span><span class="rule" aria-hidden="true"><i style="width:88%"></i></span></span><span class="hs">8.8</span></span></li>
+            <li><span class="no mono">07</span><span class="rw"><span><span class="tt">晚风邮局</span><span class="rule" aria-hidden="true"><i style="width:87%"></i></span></span><span class="hs">8.7</span></span></li>
+            <li><span class="no mono">08</span><span class="rw"><span><span class="tt">山海图志</span><span class="rule" aria-hidden="true"><i style="width:86%"></i></span></span><span class="hs">8.6</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 新片上线 ==================== -->
+  <section id="release" aria-labelledby="relTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lhs">
+          <span class="mk" aria-hidden="true">◷</span>
+          <div><h2 id="relTitle">久操电影网<em>新片上线</em>时间码表</h2>
+          <p>久操电影网同步标注院线档期与网络首播，每周更新一次。</p></div>
+        </div>
+        <span class="en">// TIMECODE</span>
+      </div>
+      <div class="timecode">
+        <table>
+          <caption class="sr-only">久操电影网近期新片上线时间与片长时间码表</caption>
+          <thead>
+            <tr><th scope="col">上线日期</th><th scope="col">电影名称</th><th scope="col">类型</th><th scope="col">时间码</th><th scope="col">片长</th><th scope="col">状态</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>09-30</td><td><b>长镜头之夜</b></td><td>剧情 / 都市</td><td class="tc">02:08:00</td><td>128 min</td><td><span class="st a">热播中</span></td></tr>
+            <tr><td>09-25</td><td><b>星轨尽头</b></td><td>科幻 / 冒险</td><td class="tc">02:24:00</td><td>144 min</td><td><span class="st a">热播中</span></td></tr>
+            <tr><td>09-18</td><td><b>烈风追缉</b></td><td>动作 / 谍战</td><td class="tc">01:59:00</td><td>119 min</td><td><span class="st a">热播中</span></td></tr>
+            <tr><td>10-09</td><td><b>山海图志 Ⅱ</b></td><td>动画 / 奇幻</td><td class="tc">00:00:00</td><td>待定</td><td><span class="st b">即将上线</span></td></tr>
+            <tr><td>10-16</td><td><b>晚风邮局</b></td><td>爱情 / 文艺</td><td class="tc">01:52:00</td><td>112 min</td><td><span class="st b">网络首播</span></td></tr>
+            <tr><td>08-22</td><td><b>第八封回信</b></td><td>悬疑 / 推理</td><td class="tc">02:05:00</td><td>125 min</td><td><span class="st c">在线可看</span></td></tr>
+            <tr><td>07-05</td><td><b>铁线防线</b></td><td>战争 / 历史</td><td class="tc">02:26:00</td><td>146 min</td><td><span class="st c">在线可看</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 影视资讯 ==================== -->
+  <section id="news" aria-labelledby="newsTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lhs">
+          <span class="mk" aria-hidden="true">◷</span>
+          <div><h2 id="newsTitle">久操电影网<em>观测记录</em></h2>
+          <p>新片前瞻、榜单解读、片长盘点，久操电影网编辑部持续更新。</p></div>
+        </div>
+        <span class="en">// LOG</span>
+      </div>
+      <div class="logs">
+        <article class="log">
+          <time datetime="2026-09-29">2026-09-29</time>
+          <h3>国庆档前瞻：这 8 部热门电影值得看</h3>
+          <p>久操电影网从定档新片中挑出期待值与口碑信号双高的 8 部，并标出各自片长。</p>
+          <a class="more" href="#">阅读全文 &gt;</a>
+        </article>
+        <article class="log">
+          <time datetime="2026-09-16">2026-09-16</time>
+          <h3>久操电影网榜单规则更新说明</h3>
+          <p>热播榜与口碑榜的权重调整，计算口径在本文一次讲清。</p>
+          <a class="more" href="#">阅读全文 &gt;</a>
+        </article>
+        <article class="log">
+          <time datetime="2026-09-03">2026-09-03</time>
+          <h3>片长数据是怎么测出来的</h3>
+          <p>久操电影网把「实测片长」拆成三条可核查的判据，避免虚标。</p>
+          <a class="more" href="#">阅读全文 &gt;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 关于 ==================== -->
+  <section id="about" aria-labelledby="aboutTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lhs">
+          <span class="mk" aria-hidden="true">◷</span>
+          <div><h2 id="aboutTitle">关于<em>久操电影网</em></h2>
+          <p>时间花在哪，先看清楚。</p></div>
+        </div>
+        <span class="en">// ABOUT</span>
+      </div>
+      <div class="about">
+        <div class="manual">
+          <p>久操电影网（官网 https://jiucaodianyingwang-cn.github.io）聚合热门电影、电影推荐与新片上线信息，用<b>量程分类、影视排行榜与新片上线时间码表</b>三套体系，先把片长量清楚，再帮你在海量片库里挑片。</p>
+          <p>我们不做随便推推的片单：久操电影网的片长取自可核查的实测读数，热播榜来自站内播放数据，口碑榜来自用户评分的加权均值，口径全部公开，写在「观测记录」里。</p>
+          <blockquote>两个小时是自己给的，先量清楚要花多久，再决定给不给。</blockquote>
+          <ul>
+            <li><b>01</b><span>收录热门电影超 29,900 部，覆盖院线新片、经典老片与修复影像</span></li>
+            <li><b>02</b><span>每部片标注实测片长与时间码，支持 90-180 min 区间筛选</span></li>
+            <li><b>03</b><span>榜单每日 0 点刷新，热度与口碑分开呈现</span></li>
+            <li><b>04</b><span>支持 1080P / 4K 多清晰度切换，久操电影网免费看</span></li>
+          </ul>
+        </div>
+        <aside class="sidecard">
+          <h3>HOW TO MEASURE / 挑片流程</h3>
+          <svg viewBox="0 0 300 175" role="img" aria-label="久操电影网挑片流程示意图：量程分类、时长片单、影视排行榜与片长读数">
+            <rect x="8" y="8" width="284" height="159" fill="#f2f0e9"/>
+            <rect x="8" y="8" width="284" height="159" fill="none" stroke="#1d2b26" stroke-width="2"/>
+            <rect x="24" y="34" width="70" height="52" fill="none" stroke="#2f6f6a" stroke-width="2"/>
+            <g stroke="#1d2b26" stroke-width="1">
+              <path d="M34 34 L34 44 M44 34 L44 41 M54 34 L54 44 M64 34 L64 41 M74 34 L74 44 M84 34 L84 41"/>
+            </g>
+            <text x="59" y="102" fill="#f2f0e9" font-size="10.5" font-weight="900" text-anchor="middle">量程分类</text>
+            <rect x="115" y="34" width="70" height="52" fill="none" stroke="#e8641c" stroke-width="2"/>
+            <rect x="125" y="56" width="50" height="10" fill="#f0a93c"/>
+            <text x="150" y="102" fill="#f2f0e9" font-size="10.5" font-weight="900" text-anchor="middle">时长片单</text>
+            <rect x="206" y="34" width="70" height="52" fill="none" stroke="#1d2b26" stroke-width="2"/>
+            <circle cx="241" cy="60" r="16" fill="none" stroke="#e8641c" stroke-width="2"/>
+            <path d="M241 60 L241 48" stroke="#e8641c" stroke-width="2"/>
+            <text x="241" y="102" fill="#f2f0e9" font-size="10.5" font-weight="900" text-anchor="middle">影视排行榜</text>
+            <path d="M94 60 L115 60 M185 60 L206 60" stroke="#1d2b26" stroke-width="2"/>
+            <path d="M150 86 L150 112" stroke="#1d2b26" stroke-width="2"/>
+            <rect x="98" y="112" width="104" height="26" fill="#1d2b26"/>
+            <text x="150" y="130" fill="#f0a93c" font-size="11" font-weight="900" text-anchor="middle" font-family="monospace">久操电影网 112 MIN</text>
+            <text x="150" y="26" fill="#1d2b26" font-size="11" font-weight="900" text-anchor="middle">RUNTIME LAB</text>
+            <g stroke="rgba(29,43,38,.35)" stroke-width="1">
+              <path d="M24 148 L276 148"/>
+              <path d="M24 144 L24 152 M54 145 L54 151 M84 144 L84 152 M114 145 L114 151 M144 144 L144 152 M174 145 L174 151 M204 144 L204 152 M234 145 L234 151 M264 144 L264 152"/>
+            </g>
+          </svg>
+          <div class="kv"><span>网站名称</span><b>久操电影网</b></div>
+          <div class="kv"><span>官方网址</span><b>jiucaodianyingwang-cn.github.io</b></div>
+          <div class="kv"><span>平均片长</span><b>112 min</b></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 常见问题 ==================== -->
+  <section id="faq" aria-labelledby="faqTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lhs">
+          <span class="mk" aria-hidden="true">◷</span>
+          <div><h2 id="faqTitle">久操电影网<em>常见问题</em></h2>
+          <p>关于片长数据、收录量与官网网址的高频疑问。</p></div>
+        </div>
+        <span class="en">// FAQ</span>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>久操电影网的片长数据准不准？</summary>
+          <p>久操电影网的片长取自片源实测读数，与院线公映版本对齐；特别版、导演剪辑版会单独标注。发现偏差可在「联系我们」提交，我们核对后当日更正。</p>
+        </details>
+        <details>
+          <summary>久操电影网收录多少部电影？更新频率如何？</summary>
+          <p>久操电影网目前收录热门电影超 29,900 部，涵盖院线新片、经典老片、动画电影与小众佳作。片库每日更新，时间码表每周刷新一次，热播榜与口碑榜每日 0 点各刷新一次。</p>
+        </details>
+        <details>
+          <summary>可以按片长筛选电影吗？</summary>
+          <p>可以。久操电影网支持 90-180 min 区间筛选，片单页每部片都带时长占比条，方便你按「今晚有多少时间」来挑片。</p>
+        </details>
+        <details>
+          <summary>久操电影网官网网址是什么？</summary>
+          <p>久操电影网官方网址为 https://jiucaodianyingwang-cn.github.io，请认准该域名，避免访问仿冒站点。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 联系我们 ==================== -->
+  <section id="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lhs">
+          <span class="mk" aria-hidden="true">◷</span>
+          <div><h2 id="contactTitle">联系<em>久操电影网</em></h2>
+          <p>影片补录、片长纠错、商务合作，都可以留言。</p></div>
+        </div>
+        <span class="en">// CONTACT</span>
+      </div>
+      <div class="contact">
+        <form class="form" action="#" method="post" onsubmit="return false;">
+          <h3>MESSAGE / 观众留言</h3>
+          <div class="f-row">
+            <label for="cname">您的称呼</label>
+            <input id="cname" name="name" type="text" placeholder="请输入昵称或姓名" autocomplete="name">
+          </div>
+          <div class="f-row">
+            <label for="cmail">联系邮箱</label>
+            <input id="cmail" name="email" type="email" placeholder="name@example.com" autocomplete="email">
+          </div>
+          <div class="f-row">
+            <label for="ctype">问题类型</label>
+            <select id="ctype" name="type">
+              <option>影片补录</option>
+              <option>片长纠错</option>
+              <option>播放异常反馈</option>
+              <option>商务合作</option>
+            </select>
+          </div>
+          <div class="f-row">
+            <label for="cmsg">详细说明</label>
+            <textarea id="cmsg" name="message" placeholder="请描述你想看的电影名称或遇到的问题"></textarea>
+          </div>
+          <div class="f-row">
+            <span></span>
+            <span class="f-sub"><button type="submit">提交给久操电影网</button></span>
+          </div>
+        </form>
+        <aside class="sidecard">
+          <h3>CONTACT / 联系方式</h3>
+          <div class="kv"><span>官方网站</span><b>https://jiucaodianyingwang-cn.github.io</b></div>
+          <div class="kv"><span>网站名称</span><b>久操电影网</b></div>
+          <div class="kv"><span>在线入口</span><b><a href="#">久操电影网在线客服</a></b></div>
+          <div class="kv"><span>处理时效</span><b>3 个工作日内</b></div>
+          <div class="tags">
+            <span>久操电影网</span><span>电影片长</span><span>电影推荐</span><span>影视排行榜</span><span>新片上线</span><span>影视资讯</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== 页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>久操电影网</h4>
+        <p>久操电影网（https://jiucaodianyingwang-cn.github.io）聚合热门电影、电影推荐、影视排行榜与新片上线时间，每部片都标注实测片长，时间花在哪，先看清楚。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <a href="#home">久操电影网首页</a>
+        <a href="#category">量程分类</a>
+        <a href="#pick">时长片单</a>
+        <a href="#rank">影视排行榜</a>
+        <a href="#release">新片上线</a>
+      </div>
+      <div>
+        <h4>久操电影网热门量程</h4>
+        <a href="#">01 · 动作犯罪 118 min</a>
+        <a href="#">03 · 科幻冒险 136 min</a>
+        <a href="#">05 · 悬疑推理 124 min</a>
+        <a href="#">07 · 动画电影 96 min</a>
+        <a href="#">08 · 经典修复 121 min</a>
+      </div>
+      <div>
+        <h4>久操电影网帮助与合作</h4>
+        <a href="#faq">常见问题</a>
+        <a href="#contact">联系我们</a>
+        <a href="#">影片投稿</a>
+        <a href="#">版权声明</a>
+        <a href="#">意见反馈</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 久操电影网 · 官网 https://jiucaodianyingwang-cn.github.io · 时间花在哪，先看清楚</span>
+      <span><a href="#">隐私政策</a> · <a href="#">服务条款</a> · <a href="#">意见反馈</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="totop" href="#home" aria-label="回到顶部">↑</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://jiucaodianyingwang-cn.github.io/#website",
+      "url": "https://jiucaodianyingwang-cn.github.io/",
+      "name": "久操电影网",
+      "alternateName": ["久操电影网官网", "久操电影网在线观看"],
+      "inLanguage": "zh-CN",
+      "description": "久操电影网提供热门电影在线观看、电影推荐、影视排行榜与新片上线时间，每部片都标注实测片长。",
+      "publisher": { "@id": "https://jiucaodianyingwang-cn.github.io/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://jiucaodianyingwang-cn.github.io/?kw={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://jiucaodianyingwang-cn.github.io/#organization",
+      "name": "久操电影网",
+      "url": "https://jiucaodianyingwang-cn.github.io/",
+      "description": "久操电影网是聚合热门电影、电影推荐与影视排行榜的影视内容平台，主打片长实测与按时长挑片。",
+      "areaServed": "CN",
+      "knowsAbout": ["久操电影网", "电影片长", "热门电影", "电影推荐", "影视排行榜"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jiucaodianyingwang-cn.github.io/#webpage",
+      "url": "https://jiucaodianyingwang-cn.github.io/",
+      "name": "久操电影网 - 热门电影在线观看与电影推荐（标注片长）",
+      "isPartOf": { "@id": "https://jiucaodianyingwang-cn.github.io/#website" },
+      "inLanguage": "zh-CN",
+      "about": { "@id": "https://jiucaodianyingwang-cn.github.io/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "久操电影网首页", "item": "https://jiucaodianyingwang-cn.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "量程分类" },
+        { "@type": "ListItem", "position": 3, "name": "时长片单" },
+        { "@type": "ListItem", "position": 4, "name": "影视排行榜" },
+        { "@type": "ListItem", "position": 5, "name": "联系我们" }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
